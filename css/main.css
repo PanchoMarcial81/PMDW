@@ -27,8 +27,23 @@ textarea, a {
 }
 
 .center {
+  text-align: center;
   margin: 0px auto;
 }
+
+.main-title {
+  font-weight: bold;
+  font-size: 60px;
+  color: #060a0f;
+}
+
+.rounded-circle {
+  width: 250px;
+  height: 250px;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
 input,
 select,
 option,
@@ -92,6 +107,20 @@ nav {
   position: fixed;
   border-bottom: 1px solid transparent;
   z-index: 100;
+}
+nav:hover {
+  background-color: white;
+  padding: 25px 0px;
+  border: 1px solid rgba(6, 10, 15, 0.1);
+}
+nav:hover .logo img {
+  width: 80%;
+}
+nav:hover ul {
+  margin-top: 8px;
+}
+nav:hover ul li a {
+  color: rgba(73, 73, 73, 0.5);
 }
 nav .logo img {
   width: 100%;

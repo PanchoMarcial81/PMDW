@@ -24,9 +24,16 @@ p
 .pad_100
 	padding: 100px 0px
 .center
-	text-align:center 
+	text-align: center
 	margin: 0px auto
-
+.main-title
+	font-weight: bold
+	font-size: 60px
+	color: $base
+.rounded-circle
+	width: 250px
+	height: 250px
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
 // Estios de inputs, textarea, buttoms
 input,
 select,
@@ -80,6 +87,18 @@ nav
 	border-bottom: 1px solid transparent
 	z-index: 100
 	@extend .tSlow
+	&:hover
+		background-color: white
+		padding: 25px 0px
+		border: 1px solid transparentize($base, 0.9)
+		.logo 
+			img 
+				width: 80%
+		ul 
+			margin-top: 8px
+			li 
+				a 
+					color: $text
 	.logo
 		img 
 			width: 100%
