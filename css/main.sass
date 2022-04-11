@@ -30,10 +30,7 @@ p
 	font-weight: bold
 	font-size: 60px
 	color: $base
-.rounded-circle
-	width: 250px
-	height: 250px
-	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+
 // Estios de inputs, textarea, buttoms
 input,
 select,
@@ -77,6 +74,32 @@ button
 	&:hover
 		background-color: $outline 
 		border: 1px solid $outline
+
+//Imagenes del sitio
+.servicio-img
+	width: 250px
+	height: 250px
+	@extend .rombo
+.rombo
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+	@extend .tSlow
+	&:hover
+		clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%)
+.diamante
+	display: block
+	position: relative
+	width: 100%
+	overflow: hidden
+	margin: 0px auto
+	background-image: url("../images/square_01.jpg")
+	background-size: 100%
+	background-position: center center
+	background-repeat: no-repeat
+	@extend .rombo
+	z-index: 200
+.tumblr
+	width: 150px
+	height: 150px
 
 //Estilos de la barra de navegacion
 nav
@@ -180,3 +203,7 @@ nav
 		top:400px
 	.top_450
 		top:450px
+
+//FOOTER Y ESTILOS
+footer
+	margin-top: -60px

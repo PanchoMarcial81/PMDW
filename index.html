@@ -34,6 +34,9 @@
 
 	<!-- Slider Slippry -->
 	<link rel="stylesheet" type="text/css" href="css/slippry.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 </head>
 <body>
@@ -44,7 +47,7 @@
 				<!-- Nuestro logotipo -->
 				<div class="col-xl-2">
 					<a href="https://www.panchomarcial.cl">
-						<img src="images/logo.svg" alt="Logo PM">
+						<img src="images/logo.svg" alt="Logo PM" style="width: 150px;">
 					</a>
 				</div>
 				<!-- Link de navegacion -->
@@ -101,12 +104,12 @@
 			<div class="row">
 				<div class="d-flex align-items-center">
 					<div class="col-xl-6">
-						<div class="diamante">
+						<div class="rounded-circle diamante">
 							
 						</div>
 					</div>
 					<div class="col-xl-6">
-						<h3><strong>Blackparadox</strong> va a tus eventos</h3>
+						<h3><strong>Pancho Marcial</strong> va a tus eventos</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -131,26 +134,27 @@
 			<br><br><br>
 			<div class="row">
 				<div class="col-xl-4 center">
-					<img class="rounded-circle" src="images/square_03.jpg" alt="Eventos">
+					<img class="rounded-circle servicio-img" src="images/square_03.jpg" alt="Eventos">
 					<h2>Eventos</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<button>Leer mas &raquo;</button>
 				</div>
-			</div>
-			<div class="row">
+			
 				<div class="col-xl-4 center">
-					<img class="rounded-circle" src="images/square_02.jpg" alt="Bodas">
+					<img class="rounded-circle servicio-img" src="images/square_02.jpg" alt="Bodas">
 					<h2>Bodas</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<button>Leer mas &raquo;</button>
 				</div>
-			</div>
-			<div class="row">
+			
 				<div class="col-xl-4 center">
-					<img class="rounded-circle" src="images/square_10.jpg" alt="XV años">
+					<img class="rounded-circle servicio-img" src="images/square_10.jpg" alt="XV años">
 					<h2>XV años</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<button>Leer mas &raquo;</button>
 				</div>
 			</div>
 		</div>
@@ -158,6 +162,66 @@
 	<!-- ends servicios -->
 
 	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-2">
+					<p class="white"><strong>Mapa del sitio</strong></p>
+					<ul class="white">
+						<li class="small">Inicio</li>
+						<li class="small">Nosotros</li>
+						<li class="small">Portafolio</li>
+						<li class="small">Contacto</li>
+						<hr>
+						<li class="small">Conrato</li>
+						<li class="small">Servicios</li>
+						<li class="small">Facturación</li>
+						<li class="small">Términos y condiciones</li>
+					</ul>
+				</div>
+				<div class="col-xl-6">
+					<p class="white"><strong>Tumblr</strong></p>
+					<img class="tumblr" src="images/square_01.jpg" alt="Imagen 01">
+					<img class="tumblr" src="images/square_02.jpg" alt="Imagen 02">
+					<img class="tumblr" src="images/square_03.jpg" alt="Imagen 03">
+					<img class="tumblr" src="images/square_04.jpg" alt="Imagen 04">
+					<img class="tumblr" src="images/square_05.jpg" alt="Imagen 05">
+					<img class="tumblr" src="images/square_06.jpg" alt="Imagen 06">
+					<img class="tumblr" src="images/square_07.jpg" alt="Imagen 07">
+					<img class="tumblr" src="images/square_08.jpg" alt="Imagen 08">
+					<img class="tumblr" src="images/square_09.jpg" alt="Imagen 09">
+					<img class="tumblr" src="images/square_10.jpg" alt="Imagen 10">
+				</div>
+				<div class="col-xl-4">
+					<p class="white"><strong>Contacto</strong></p>
+					<ul class="white">
+						<li class="small">+56 9 66558899</li>
+						<li class="small">hello@blackparadox.com</li>
+						<li class="small">John Doe <i>Fotógrafo</i></li>
+					</ul>
+					<br>
+					<p class="white"><strong>Redes Sociales</strong></p>
+					<ul class="social-networks">
+						<li><i class="fa fa-facebook"></i></li>
+						<li><i class="fa fa-facebook"></i></li>
+						<li><i class="fa fa-facebook"></i></li>
+						<li><i class="fa fa-facebook"></i></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="copy">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="small">
+						&copy; 2017 Todos los derechos reservados por <a href="#">Pancho Marcial</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- ends footer -->
 	
 	<!-- Bootstrap JS CDN -->
@@ -174,6 +238,12 @@
 			$('#slippry').slippry({
 				captions: false,
 				pager: false
+			});
+
+			/** Detectar el ancho del diamante, y poner el mismo valor de HEIGHT **/
+			var dn_width = $('.diamante').width();
+			$(".diamante").css({
+				height: dn_width
 			});
 		});
 	</script>

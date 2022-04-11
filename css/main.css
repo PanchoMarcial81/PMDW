@@ -14,7 +14,7 @@ p {
   color: #494949;
 }
 
-.tSlow, nav ul li a:after, nav ul li a:before, nav ul li a, nav ul .link-active a:after, nav ul, nav .logo img, nav, button, input,
+.tSlow, nav ul li a:after, nav ul li a:before, nav ul li a, nav ul .link-active a:after, nav ul, nav .logo img, nav, .rombo, .diamante, .servicio-img, button, input,
 select,
 option,
 textarea, a {
@@ -35,13 +35,6 @@ textarea, a {
   font-weight: bold;
   font-size: 60px;
   color: #060a0f;
-}
-
-.rounded-circle {
-  width: 250px;
-  height: 250px;
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 input,
@@ -98,6 +91,38 @@ button:hover {
 .black:hover {
   background-color: #ff6600;
   border: 1px solid #ff6600;
+}
+
+.servicio-img {
+  width: 250px;
+  height: 250px;
+}
+
+.rombo, .diamante, .servicio-img {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.rombo:hover, .diamante:hover, .servicio-img:hover {
+  -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+          clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.diamante {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px auto;
+  background-image: url("../images/square_01.jpg");
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 200;
+}
+
+.tumblr {
+  width: 150px;
+  height: 150px;
 }
 
 nav {
@@ -217,4 +242,8 @@ nav ul li a:hover:after {
 }
 #slippry .top_450 {
   top: 450px;
+}
+
+footer {
+  margin-top: -60px;
 }
