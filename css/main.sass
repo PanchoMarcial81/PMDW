@@ -96,10 +96,7 @@ button
 	background-position: center center
 	background-repeat: no-repeat
 	@extend .rombo
-	z-index: 200
-.tumblr
-	width: 150px
-	height: 150px
+	z-index: 50
 
 //Estilos de la barra de navegacion
 nav
@@ -173,7 +170,18 @@ nav
 					&:after 
 						width:  100%
 						background-color: $base 
-
+.nav-overlay
+	background-color: white
+	border-bottom: 1px solid transparentize($base, .9)
+	padding: 25px 0px
+	.logo
+		img 
+			width: 80%
+	ul 
+		margin-top: 8px
+		li 
+			a 
+				color: $text
 
 ////// ESTILOS SLIDER SLIPPRY //////
 #slider
@@ -207,3 +215,76 @@ nav
 //FOOTER Y ESTILOS
 footer
 	margin-top: -60px
+	width: 100%
+	background-color: $base
+	padding: 70px 0px
+	clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 100%, 0% 100%)
+	p 
+		margin: 0px
+		padding: 0px
+	.white 
+		color: transparentize(white, .6)
+	ul 
+		padding: 0px
+		margin: 0px
+		list-style: none
+		li 
+			padding: 0px
+			margin: 0px
+			color: transparentize(white, .8)
+	hr 
+		border-radius: 10px
+		background-color: transparentize(white, .92)
+.tumblr
+	position: relative
+	float: left 
+	margin: 0px
+	padding: 0px
+	width: 20%
+	cursor: pointer
+	opacity: .7
+	@extend .tSlow
+	&:hover
+		opacity: 1
+.copy
+	padding: 10px 10px
+	background-color: lighten($base, 1)
+	text-align: left
+	p, a
+		margin: 0px
+		padding: 0px
+		color: transparentize(white, .7)
+	a 
+		opacity: .5
+		color: $outline 
+		@extend .tSlow 
+		&:hover
+			opacity: 1
+			text-decoration: none
+.social-networks
+	margin-top: 5px
+	li 
+		display: inline-block
+		position: relative
+		margin: 0px 7px
+		float: left
+		width: 30px
+		height: 30px
+		text-align: center 
+		transform: rotate(0deg)
+		backface-visibility: hidden 
+		cursor: pointer
+		@extend .tSlow 
+		i 
+			font-size: 22px
+			color: transparentize(white, .8)
+			transform: rotate(0deg) translate(3px, 3px)
+			backface-visibility: hidden
+			@extend .tSlow 
+		&:hover 
+			transform: rotate(45deg)
+			background-color: white 
+			backface-visibility: hidden 
+			i 
+				color: $base 
+				transform: rotate(-45deg)translate(-3px, 3px)

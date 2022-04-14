@@ -104,7 +104,7 @@
 			<div class="row">
 				<div class="d-flex align-items-center">
 					<div class="col-xl-6">
-						<div class="rounded-circle diamante">
+						<div class="diamante rounded-circle ">
 							
 						</div>
 					</div>
@@ -197,15 +197,15 @@
 					<ul class="white">
 						<li class="small">+56 9 66558899</li>
 						<li class="small">hello@blackparadox.com</li>
-						<li class="small">John Doe <i>Fotógrafo</i></li>
+						<li class="small">John Doe /<i> Fotógrafo</i></li>
 					</ul>
 					<br>
 					<p class="white"><strong>Redes Sociales</strong></p>
 					<ul class="social-networks">
 						<li><i class="fa fa-facebook"></i></li>
-						<li><i class="fa fa-facebook"></i></li>
-						<li><i class="fa fa-facebook"></i></li>
-						<li><i class="fa fa-facebook"></i></li>
+						<li><i class="fa fa-twitter"></i></li>
+						<li><i class="fa fa-youtube"></i></li>
+						<li><i class="fa fa-instagram"></i></li>
 					</ul>
 				</div>
 			</div>
@@ -216,7 +216,7 @@
 			<div class="row">
 				<div class="col">
 					<p class="small">
-						&copy; 2017 Todos los derechos reservados por <a href="#">Pancho Marcial</a>.
+						&copy; 2022 Todos los derechos reservados por <a href="#">Pancho Marcial</a>.
 					</p>
 				</div>
 			</div>
@@ -245,6 +245,18 @@
 			$(".diamante").css({
 				height: dn_width
 			});
+
+			/** Agregamos la clase al hacer scroll a la barra de navegacion, despues de llegar al contenedor de nosotros **/
+			var slider = $("#slider").height();
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll >= $("#nosotros").offset().top -200) {
+					$("#nav").addClass('nav-overlay');
+				}else{
+					$("#nav").removeClass('nav-overlay');
+				}
+			});
+			$(window).scroll();
 		});
 	</script>
 </body>
