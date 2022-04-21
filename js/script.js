@@ -6,6 +6,12 @@ $(document).ready(function(){
 	});
 
 	/** Detectar el ancho del diamante, y poner el mismo valor de HEIGHT **/
+	var dn_width = $('.grid-item').width();
+	$(".grid-item").css({
+		height: dn_width
+	});
+
+	/** Detectar el ancho del diamante, y poner el mismo valor de HEIGHT **/
 	var dn_width = $('.diamante').width();
 	$(".diamante").css({
 		height: dn_width

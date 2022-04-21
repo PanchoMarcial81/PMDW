@@ -14,7 +14,7 @@ p {
   color: #494949;
 }
 
-.tSlow, .social-networks li i, .social-networks li, .copy a, .tumblr, nav ul li a:after, nav ul li a:before, nav ul li a, nav ul .link-active a:after, nav ul, nav .logo img, nav, .rombo, .diamante, .servicio-img, button, input,
+.tSlow, .social-networks li i, .social-networks li, .copy a, .tumblr, .grid-item:before, .grid-item, nav ul li a:after, nav ul li a:before, nav ul li a, nav ul .link-active a:after, nav ul, nav .logo img, nav, .rombo, .diamante, .servicio-img, button, input,
 select,
 option,
 textarea, a {
@@ -131,7 +131,7 @@ nav {
 nav:hover {
   background-color: white;
   padding: 25px 0px;
-  border: 1px solid rgba(6, 10, 15, 0.1);
+  border-bottom: 1px solid rgba(6, 10, 15, 0.1);
 }
 nav:hover .logo img {
   width: 80%;
@@ -252,6 +252,57 @@ nav ul li a:hover:after {
 }
 #slippry .top_450 {
   top: 450px;
+}
+
+.grid {
+  width: 100%;
+  padding: 150px 0px;
+}
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  width: 20%;
+  padding-bottom: 20%;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  cursor: pointer;
+  margin-top: -95px;
+}
+.grid-item:before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  background-image: none;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.grid-item:nth-child(6), .grid-item:nth-child(15) {
+  margin-left: 111px;
+}
+.grid-item a img {
+  width: 100%;
+  height: auto;
+}
+.grid-item:hover:before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 102, 0, 0.9);
+  background-image: url("../images/cross.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 30%;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
