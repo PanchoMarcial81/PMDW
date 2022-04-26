@@ -14,19 +14,20 @@ if (isset($_POST['submit'])) {
 		}
 		$info['mensaje'] = $_POST['mensaje'];
 		$info['ip'] = $_SERVER['REMOTE_ADDR'];
-		$info['fecha'] = 
+		$info['fecha'] = date('d M Y H:i:s');
 
 		/* Para probar localmente */
 		$mensaje = "
 		<html>
 		<body>
 			<h3>Tu mensaje ha sido enviado</h3>
-			<p><strong>Nombre:</strong> $info['nombre']</p>
-			<p><strong>E-mail:</strong> $info['email']</p>
-			<p><strong>Teléfono:</strong> $info['telefono']</p>
-			<p><strong>Mensaje:</strong> $info['mensaje']</p>
+			<p><strong>Nombre:</strong> {$info['nombre']}</p>
+			<p><strong>E-mail:</strong> {$info['email']}</p>
+			<p><strong>Teléfono:</strong> {$info['telefono']}</p>
+			<p><strong>Mensaje:</strong> {$info['mensaje']}</p>
 			<br>
-
+			<p><strong>IP:</strong> {$info['ip']}</p>
+			<p><strong>Fecha:</strong> {$info['fecha']}</p>
 		</body>
 		</html>
 		";
@@ -36,7 +37,7 @@ if (isset($_POST['submit'])) {
 		$de = $para;
 
 		// Asunto del correo
-		$asusnto = "Hola, es mi primer correo - >PanchoMarcial";
+		$asusnto = "Hola, es mi primer correo - PanchoMarcial";
 
 		// Cabecera que aparecen arriba de tu correo
 		$headers = "From: $de\r\n";
@@ -47,11 +48,16 @@ if (isset($_POST['submit'])) {
 		$enviar = mail($para, $asusnto, $mensaje, $headers);
 		if ($enviar) {
 			// Si se envia el correo
-			echo "Mensaje enviado";
+			// echo "Mensaje enviado";
+			header("Location: ../contacto.html?success");
+			exit();
 		}else{
-			echo "Uppssss!, No se envió el mensaje!!!";
-			echo "<pre>";
-			var_dump($enviar);
+			// echo "Uppssss!, No se envió el mensaje!!!";
+			// echo "<pre>";
+			// var_dump($mensaje);
+			// echo "</pre>";
+			header("Location: ../contacto.html?error");
+			exit();
 		}
 	}
 }else{
